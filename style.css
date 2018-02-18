@@ -1,0 +1,210 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 98%;
+  background-color: #0A122A;
+}
+
+a,
+p,
+div {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font: 1.2em Cabin, sans-serif;
+  letter-spacing: 0.07em;
+}
+
+header {
+  padding-top: 10px;
+  height:25%;
+}
+
+
+.navbar {
+  display: inline;
+  width: 75%;
+  float: right;
+  text-align: right;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-left: 30px;
+  list-style-position: inside;
+}
+
+.navbar ul a {
+  display: inline-block;
+  border: 3px solid transparent;
+}
+
+.text {
+  font-family: proxima-nova;
+  transform: translate3d(0, 0.7em, 0);
+  display: block;
+  transition: transform 0.4s cubic-bezier(.2, 0, 0, 1) 0.4s;
+}
+
+.text:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 1.2em;
+  right: 1.2em;
+  height: 3px;
+  background: white;
+  z-index: -1;
+  transition: transform 0.8s cubic-bezier(1, 0, .37, 1) 0.2s, right 0.2s cubic-bezier(.04, .48, 0, 1) 0.6s, left 0.4s cubic-bezier(.04, .48, 0, 1) 0.6s;
+  transform-origin: left;
+}
+
+.line {
+  position: absolute;
+  background: white;
+}
+
+.line .right,
+.line .left {
+  width: 3px;
+  bottom: -3px;
+  top: -3px;
+  transform: scale3d(1, 0, 1);
+}
+
+.line .top,
+.line .bottom {
+  height: 3px;
+  left: -3px;
+  right: -3px;
+  transform: scale3d(0, 1, 1);
+}
+
+.line .right {
+  right: -3px;
+  transition: transform 0.1s cubic-bezier(1, 0, .65, 1.01) 0.23s;
+  transform-origin: top;
+}
+
+.line .top {
+  top: -3px;
+  transition: transform 0.08s linear 0.43s;
+  transform-origin: left;
+}
+
+.line .left {
+  left: -3px;
+  transition: transform 0.08s linear 0.51s;
+  transform-origin: bottom;
+}
+
+.line .bottom {
+  bottom: -3px;
+  transition: transform 0.3s cubic-bezier(1, 0, .65, 1.01);
+  transform-origin: right;
+}
+
+
+
+a:hover .text,
+a:active .text {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s cubic-bezier(.2, 0, 0, 1) 0.4s;
+  color: #00aced;
+  text-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+a:hover .text:after,
+a:active .text:after {
+  transform: scale3d(0, 1, 1);
+  right: -3px;
+  left: -3px;
+  transform-origin: right;
+  transition: transform 0.2s cubic-bezier(1, 0, .65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, .65, 1.01), left 0s 0.3s;
+}
+a:hover .line,
+a:active .line {
+  transform: scale3d(1, 1, 1);
+}
+a:hover .line .right,
+a:active .line .right {
+  transition: transform 0.1s cubic-bezier(1, 0, .65, 1.01) 0.2s;
+  transform-origin: bottom;
+}
+a:hover .line .top,
+a:active .line .top {
+  transition: transform 0.08s linear 0.4s;
+  transform-origin: right;
+}
+a:hover .line .left,
+a:active .line .left {
+  transition: transform 0.08s linear 0.48s;
+  transform-origin: top;
+}
+a:hover .line .bottom,
+a:active .line .bottom {
+  transition: transform 0.5s cubic-bezier(0, .53, .29, 1) 0.56s;
+  transform-origin: left;
+}
+.logo {
+  width: 25%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+.logo a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  -webkit-transition: all .7s cubic-bezier(.23, 1, .32, 1) 0s;
+  -o-transition: all .7s cubic-bezier(.23, 1, .32, 1) 0s;
+  transition: all .7s cubic-bezier(.23, 1, .32, 1) 0s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-transform: uppercase;
+}
+footer ul {
+  list-style-position: inside;
+  list-style-type: none;
+}
+footer {
+  width: 98%;
+  position: fixed;
+  bottom: 15px;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: unset;
+  -webkit-box-direction: unset;
+  -ms-flex-direction: unset;
+  flex-direction: unset;
+  -ms-flex-wrap: unset;
+  flex-wrap: unset;
+}
+.footer_disclosure {
+  width: 100%;
+}
+.copyright {
+  float: right;
+}
+.social {
+  padding-left: 25px;
+}
+.social a:hover {
+  color: #00aced;
+  text-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
